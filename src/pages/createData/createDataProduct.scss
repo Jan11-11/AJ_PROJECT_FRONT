@@ -257,7 +257,9 @@
 #undoclick{
   color: #06554D;
   font-size: 18px;
-  width:140px
+  width: 150px;
+  display: flex;
+  
 }
 
 #undoclick:hover{
