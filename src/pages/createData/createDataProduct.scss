@@ -1,0 +1,730 @@
+@use "sass:math";
+.createData {
+  overflow-x: hidden;
+  font-family: "Segoe UI";
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.pageTitle {
+  width: 100%;
+  font-weight: 700;
+  font-size: 30px;
+  margin-top: 3%;
+}
+
+.createpage {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+
+  position: relative;
+
+  .createLeftpart{
+    width: 40%;
+  }
+
+  .createimg {
+    width: 100%;
+    height: 80%;
+    background: #F9F9F9;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+    img{
+      transform: translate(-50%, -50%);
+      max-width: 100%;
+      height: auto;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+    
+  }
+
+  #createdImg {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+  }
+
+  .create {
+    width: 56%;
+    position: relative;
+
+    .createInput {
+      width: 100%;
+      position: relative;
+
+      .createName {
+        width: 100%;
+
+        label {
+          width: 100%;
+          font-weight: 400;
+          font-size: 14px;
+        }
+
+        input {
+          width: 100%;
+          padding: 12px 2px;
+          border: 1px solid #0B1219;
+        }
+      }
+
+      .createInfo {
+        width: 100%;
+        position: relative;
+        margin-top: 30px;
+
+        label {
+          width: 100%;
+          font-weight: 400;
+          font-size: 14px;
+        }
+
+        input {
+          width: 100%;
+          padding-bottom: 20%;
+        }
+      }
+    }
+
+   
+
+    .buttons {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 3rem;
+      width: 100%;
+
+      .removeBtn {
+        border: 2px solid #06554D;
+        background-color: #FFFFFF;
+        padding: 12px 0px 16px 0px;
+        font-size: 20px;
+        width: 39%;
+        cursor: pointer;
+        
+      }
+
+      .addBtn {
+        margin-left: 24px;
+        color: #FFFFFF;
+        border: 1px solid#06554D;
+        background-color: #06554D;
+        padding: 12px 0px 16px 0px;
+        font-size: 20px;
+        width: 39%;
+        cursor: pointer;
+      }
+    }
+
+    .addBtn:hover{
+      cursor: pointer;
+      background: #E1AA5A;
+    }
+    .addBtn:active{
+      cursor: pointer;
+      background: #9E9E9E;
+
+    }
+    .removeBtn:hover{
+      cursor: pointer;
+      background: #E1AA5A;
+    }
+    .removeBtn:active{
+      cursor: pointer;
+      background: #9E9E9E;
+
+    }
+
+    
+  }
+}
+#leftBtn {
+  display: flex;
+  // margin-left: -1%;
+  margin-top: 20px;
+  
+  img {
+    margin-right: 10px;
+  }
+}
+
+.leftbtn{
+  label:hover{
+    cursor: pointer;
+  }
+}
+.imageErrorIcon {
+  color: red;
+  fill: red;
+  filter: red;
+}
+
+.inputError {
+  color: red;
+  border: 1px solid red;
+}
+
+#inputError::placeholder {
+  color: red;
+}
+
+#inputError {
+  color: red;
+  border: 1px solid red;
+}
+
+.inputError::placeholder {
+  color: red;
+}
+
+.labelError {
+  color: red;
+}
+
+#errorMessageForName {
+  width: 100%;
+  height: 0;
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Segoe UI";
+  color: red;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#errorMessageForTitle {
+  width: 100%;
+  height: 0;
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Segoe UI";
+  color: red;
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+}
+
+#hideErrorMessage {
+  display: none;
+}
+
+.imageErrorMessage {
+  color: red;
+}
+
+.imageError {
+  width: 42%;
+  height: 0;
+  border: 1px solid red;
+}
+#createInfo{
+  input[type="text"]::placeholder{
+    padding-left: 12px;
+  }
+}
+
+#createName{
+  input[type="text"]::placeholder{
+    padding-left: 10px;
+  }
+}
+
+#createName{
+  input{
+    padding-left: 10px;
+  }
+}
+
+#createInfo{
+  input{
+    padding-left: 10px;
+  padding-top: 10px;
+  }
+}
+#undoclick{
+  color: #06554D;
+  font-size: 18px;
+  width:140px
+}
+
+#undoclick:hover{
+  cursor: pointer;
+  color: #E1AA5A ;
+
+}
+
+#undoclick:active{
+  cursor: pointer;
+  color: #9E9E9E ;
+
+}
+
+@media (max-width:1071px) and (min-width:905px) {
+ 
+
+  #createTitle {
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  #createpage {
+    width: 100%;
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: center;
+    margin-top: 36px;
+  }
+
+  #createImage {
+    height: 70%;
+    margin-top: 30px;
+    img{
+      height: 220px;
+    }
+  }
+
+  #create {
+    width: 50%;
+    margin-left: 3%;
+  }
+
+  #createInput {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  #createName {
+
+    label {
+      width: 100%;
+    }
+
+    input {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  #createInfo {
+    width: 100%;
+    margin-top: 10%;
+
+    input {
+      padding-bottom: 25%;
+    }
+  }
+
+  #buttons {
+    margin-top: 30px;
+
+    #removeBtn {
+      font-size: 18px;
+    }
+
+    #addBtn {
+      padding: 9px 24px 10px 24px;
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width:905px) and (min-width:769px) {
+  #container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #createTitle {
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  #createpage {
+    width: 100%;
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: center;
+    margin-top: 36px;
+  }
+
+  #createImage {
+    width: 100%;
+    height: 65%;
+    margin-top: 30px;
+    img{
+      height: 190px;
+    }
+  }
+
+  #create {
+    width: 50%;
+    margin-left: 3%;
+  }
+
+  #createInput {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  #createName {
+
+    label {
+      width: 100%;
+    }
+
+    input {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  #createInfo {
+    width: 100%;
+    margin-top: 10%;
+
+    input {
+      padding-bottom: 25%;
+    }
+  }
+  #buttons {
+    margin-top: 20px;
+
+    #removeBtn {
+      font-size: 18px;
+    }
+
+    #addBtn {
+      font-size: 18px;
+    }
+  }
+}
+
+
+@media (max-width:769px) and (min-width:579px) {
+  #container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #createTitle {
+    width: 100%;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  #createLeftpart{
+    width: 60%;
+    height: 300px;
+  }
+
+  #createImage{
+    
+    img{
+      height: 80%;
+    }
+  }
+  #createpage {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 66px
+  }
+
+  #imageError {
+    width: 70%;
+  }
+
+  #create {
+    width: 60%;
+  }
+
+  #createName {
+    margin-top: 49px;
+    width: 100%;
+
+    label {
+      width: 100%;
+    }
+
+    input {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  #createInfo {
+    width: 100%;
+    margin-top: 5%;
+  }
+
+  #buttons {
+    margin-top: 20px;
+
+    #removeBtn {
+      width: 47%;
+      font-size: 20px;
+    }
+
+    #addBtn {
+      width: 47%;
+      font-size: 20px;
+    }
+  }
+  #undoclick{
+    margin: 10px 20px auto 10px;
+  }
+}
+
+@media (max-width:579px) and (min-width:454px) {
+  #container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #createTitle {
+    width: 100%;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+  }
+  #createLeftpart{
+    width: 70%;
+    height: 260px;
+  }
+  #createImage {
+    img{
+      height: 80%;
+    }
+  }
+
+  #createpage {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 66px
+  }
+
+  #imageError {
+    width: 70%;
+  }
+
+  #create {
+    width: 70%;
+  }
+
+  #createInput {
+    width: 100%;
+  }
+
+  #createName {
+    margin-top: 49px;
+    width: 100%;
+
+    label {
+      width: 100%;
+    }
+
+    input {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  #createInfo {
+    width: 100%;
+    margin-top: 5%;
+  }
+
+  #buttons {
+    margin-top: 20px;
+
+    #removeBtn {
+      width: 47%;
+      font-size: 17px;
+    }
+
+    #addBtn {
+      width: 47%;
+      font-size: 17px;
+    }
+  }
+  #undoclick{
+    margin: 10px 20px auto 10px;
+  }
+}
+
+@media (max-width:454px) and (min-width:325px) {
+  #container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #createTitle {
+    width: 100%;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+  }
+  #createLeftpart{
+    width: 84%;
+    height: 220px;
+  }
+  #createImage {
+    img{
+      height: 80%;
+    }
+  }
+
+  #createpage {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 66px
+  }
+
+  #imageError {
+    width: 70%;
+  }
+
+  #create {
+    width: 84%;
+  }
+
+  #createInput {
+    width: 100%;
+  }
+
+  #createName {
+    margin-top: 49px;
+    width: 100%;
+
+    label {
+      width: 100%;
+    }
+
+    input {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  #createInfo {
+    width: 100%;
+    margin-top: 5%;
+  }
+
+  #buttons {
+    margin-top: 20px;
+
+    #removeBtn {
+      width: 47%;
+      font-size: 17px;
+    }
+
+    #addBtn {
+      width: 47%;
+      font-size: 17px;
+    }
+  }
+  #undoclick{
+    margin: 10px 20px auto 10px;
+  }
+}
+
+@media (max-width:325px) {
+  #container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #createTitle {
+    width: 100%;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+  }
+  #createLeftpart{
+    width: 84%;
+    height: 220px;
+  }
+  #createImage {
+    img{
+      height: 80%;
+    }
+  }
+
+  #createpage {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 66px
+  }
+
+  #imageError {
+    width: 70%;
+  }
+
+  #create {
+    width: 84%;
+  }
+
+  #createInput {
+    width: 100%;
+  }
+
+  #createName {
+    margin-top: 49px;
+    width: 100%;
+
+    label {
+      width: 100%;
+    }
+
+    input {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  #createInfo {
+    width: 100%;
+    margin-top: 5%;
+  }
+
+  #buttons {
+    margin-top: 20px;
+
+    #removeBtn {
+      width: 47%;
+      font-size: 17px;
+    }
+
+    #addBtn {
+      width: 47%;
+      font-size: 17px;
+    }
+  }
+  #undoclick{
+    margin: 10px 20px auto 10px;
+  }
+}
